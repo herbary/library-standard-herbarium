@@ -1,3 +1,5 @@
+#if 0
+
 #ifdef _WIN32
 #ifndef HERBARY_STD___WIN32_CRT_FLOAT_H_INCLUDED
 #define HERBARY_STD___WIN32_CRT_FLOAT_H_INCLUDED
@@ -23,3 +25,5 @@ __declspec(naked) void _ultod3(void);
 
 #endif // HERBARY_STD___WIN32_CRT_FLOAT_H_INCLUDED
 #endif // _WIN32
+
+#endif // 0

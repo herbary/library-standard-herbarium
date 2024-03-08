@@ -1,3 +1,5 @@
+#if 0
+
 #ifdef _WIN32
 #ifdef _MSC_VER
 #pragma comment(lib, "kernel32.lib")
@@ -56,3 +58,5 @@ int main(void) {
     return EXIT_FAILURE;
 }
 #endif // _WIN32
+
+#endif // 0

@@ -1,3 +1,5 @@
+#if 0
+
 #include "herbary/std/__win32_crt_float.h"
 
 #ifdef _WIN32
@@ -97,3 +99,5 @@ void _ultod3() {
 #endif // __M_X86_32
 
 #endif // _WIN32
+
+#endif // 0

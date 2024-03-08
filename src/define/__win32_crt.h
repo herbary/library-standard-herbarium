@@ -18,7 +18,7 @@
 #error "`__win32_crt_lptstr_t` mustn't be pre-defined"
 #endif // __win32_crt_lptstr_t
 #ifdef __win32_crt_lpctstr_t
-#define "`__win32_crt_lpctstr_t` mustn't be pre-defined"
+#error "`__win32_crt_lpctstr_t` mustn't be pre-defined"
 #endif // __win32_crt_lpctstr_t
 
 #define __win32_crt_uint_t UINT

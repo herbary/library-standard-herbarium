@@ -14,6 +14,9 @@
 #ifdef __win32_crt_dword_t
 #error "`__win32_crt_dword_t` mustn't be pre-defined"
 #endif // __win32_crt_dword_t
+#ifdef __win32_crt_tchar_t
+#error "`__win32_crt_tchar_t` mustn't be pre-defined"
+#endif // __win32_crt_tchar_t
 #ifdef __win32_crt_lptstr_t
 #error "`__win32_crt_lptstr_t` mustn't be pre-defined"
 #endif // __win32_crt_lptstr_t
@@ -25,6 +28,7 @@
 #define __win32_crt_handle_t HANDLE
 #define __win32_crt_dword_t DWORD
 #define __win32_crt_bool_t BOOL
+#define __win32_crt_tchar_t TCHAR
 #define __win32_crt_lptstr_t LPTSTR
 #define __win32_crt_lpctstr_t LPCTSTR
 
@@ -53,8 +57,17 @@
 #error "`__win32_crt_text` mustn't be pre-defined"
 #endif // __win32_crt_text
 #ifdef __win32_crt_tcslen
-#error "`__win32_crt_tcslen` mustn't be pre-define"
+#error "`__win32_crt_tcslen` mustn't be pre-defined"
 #endif // __win32_crt_tcslen
+#ifdef __win32_crt_create_file
+#error "`__win32_crt_create_file` mustn't be pre-defined"
+#endif // __win32_crt_create_file
+#ifdef __win32_crt_read_file
+#error "`__win32_crt_read_file` mustn't be pre-defined"
+#endif // __win32_crt_read_file
+#ifdef __win32_crt_get_full_path
+#error "`__win32_crt_get_full_path` mustn't be pre-defined"
+#endif // __win32_crt_get_full_path
 
 #define __win32_crt_exit_process ExitProcess
 #define __win32_crt_get_std_handle GetStdHandle
@@ -65,6 +78,9 @@
 #define __win32_crt_local_free LocalFree
 #define __win32_crt_text TEXT
 #define __win32_crt_tcslen _tcslen
+#define __win32_crt_create_file CreateFile
+#define __win32_crt_read_file ReadFile
+#define __win32_crt_get_full_path GetFullPathName
 
 #endif // HERBARY_STD_PREDEF___WIN32_CRT_H_INCLUDED
 #endif // _WIN32

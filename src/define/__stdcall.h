@@ -6,7 +6,7 @@
 #define __stdcall __stdcall
 #elif defined(__clang__) || defined(__GNUC__)
 #define __stdcall __attribute__((stdcall))
-#else // !defined(_MSC_VER)
+#else // !defined(_MSC_VER) && !defined(__clang__) && !defined(__GNUC__)
 #define __stdcall
 #endif // _MSC_VER
 #endif // __stdcall

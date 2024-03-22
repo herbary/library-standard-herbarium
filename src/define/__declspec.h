@@ -6,7 +6,7 @@
 #define __declspec __declspec
 #elif defined(__clang__) || defined(__GNUC__)
 #define __declspec(...) __attribute__((__VA_ARGS__))
-#else // !defined(_MSC_VER)
+#else // !defined(_MSC_VER) && !defined(__clang__) && !defined(__GNUC__)
 #define __declspec(...)
 #endif // _MSC_VER
 #endif // __declspec

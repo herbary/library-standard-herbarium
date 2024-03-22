@@ -38,6 +38,9 @@
 #ifdef __win32_crt_get_std_handle
 #error "`__win32_crt_get_std_handle` mustn't be pre-defined"
 #endif // __win32_crt_get_std_handle
+#ifdef __win32_crt_close_handle
+#error "`__win32_crt_close_handle` mustn't be pre-defined"
+#endif // __win32_crt_close_handle
 #ifdef __win32_crt_write_console
 #error "`__win32_crt_write_console` mustn't be pre-defined"
 #endif // __win32_crt_write_console
@@ -68,9 +71,19 @@
 #ifdef __win32_crt_get_full_path
 #error "`__win32_crt_get_full_path` mustn't be pre-defined"
 #endif // __win32_crt_get_full_path
+#ifdef __win32_crt_get_process_heap
+#error "`__win32_crt_get_process_heap` mustn't be pre-defined"
+#endif // __win32_crt_get_process_heap
+#ifdef __win32_crt_heap_alloc
+#error "`__win32_crt_heap_alloc` mustn't be pre-defined"
+#endif // __win32_crt_heap_alloc
+#ifdef __win32_crt_heap_free
+#error "`__win32_crt_heap_free` mustn't be pre-defined"
+#endif // __win32_crt_heap_free
 
 #define __win32_crt_exit_process ExitProcess
 #define __win32_crt_get_std_handle GetStdHandle
+#define __win32_crt_close_handle CloseHandle
 #define __win32_crt_write_console WriteConsole
 #define __win32_crt_get_last_error GetLastError
 #define __win32_crt_format_message FormatMessage
@@ -81,6 +94,9 @@
 #define __win32_crt_create_file CreateFile
 #define __win32_crt_read_file ReadFile
 #define __win32_crt_get_full_path GetFullPathName
+#define __win32_crt_get_process_heap GetProcessHeap
+#define __win32_crt_heap_alloc HeapAlloc
+#define __win32_crt_heap_free HeapFree
 
 #endif // HERBARY_STD_PREDEF___WIN32_CRT_H_INCLUDED
 #endif // _WIN32

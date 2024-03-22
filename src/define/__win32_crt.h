@@ -80,6 +80,9 @@
 #ifdef __win32_crt_heap_free
 #error "`__win32_crt_heap_free` mustn't be pre-defined"
 #endif // __win32_crt_heap_free
+#ifdef __win32_crt_copy_memory
+#error "`__win32_crt_copy_memory` mustn't be pre-defined"
+#endif // __win32_crt_copy_memory
 
 #define __win32_crt_exit_process ExitProcess
 #define __win32_crt_get_std_handle GetStdHandle
@@ -97,6 +100,7 @@
 #define __win32_crt_get_process_heap GetProcessHeap
 #define __win32_crt_heap_alloc HeapAlloc
 #define __win32_crt_heap_free HeapFree
+#define __win32_crt_copy_memory CopyMemory
 
 #endif // HERBARY_STD_PREDEF___WIN32_CRT_H_INCLUDED
 #endif // _WIN32

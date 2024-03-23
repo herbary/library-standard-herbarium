@@ -8,6 +8,10 @@
 #pragma comment(linker, "/ENTRY:__win32_crt_entry")
 #pragma comment(linker, "/STACK:0x100000,0x100000")
 
+#ifdef _DEBUG
+#pragma comment(linker, "/INCREMENTAL")
+#endif // _DEBUG
+
 #pragma runtime_checks("scu", off)
 #endif // _MSC_VER
 

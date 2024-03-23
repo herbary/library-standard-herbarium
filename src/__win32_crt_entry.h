@@ -4,7 +4,6 @@
 
 #ifdef _MSC_VER
 #pragma comment(linker, "/NODEFAULTLIB")
-#pragma comment(linker, "/SUBSYSTEM:CONSOLE")
 #pragma comment(linker, "/ENTRY:__win32_crt_entry")
 #pragma comment(linker, "/STACK:0x100000,0x100000")
 

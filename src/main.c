@@ -2,6 +2,8 @@
 
 #ifdef _WIN32
 #ifdef _MSC_VER
+#pragma comment(linker, "/SUBSYSTEM:CONSOLE")
+
 #pragma comment(lib, "kernel32.lib")
 #endif // _MSC_VER
 

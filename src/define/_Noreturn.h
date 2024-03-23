@@ -5,7 +5,7 @@
 #ifdef __STDC_VERSION__
 #if __STDC_VERSION__ >= 201112L
 #define _Noreturn _Noreturn
-#elif __STDC_VERSION__ > 201710L
+#elif __STDC_VERSION__ >= 202311L
 #define _Noreturn [[noreturn]]
 #endif // __STDC_VERSION__ < 201112L
 #endif // __STDC_VERSION__

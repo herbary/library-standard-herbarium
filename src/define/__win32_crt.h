@@ -17,20 +17,12 @@
 #ifdef __win32_crt_tchar_t
 #error "`__win32_crt_tchar_t` mustn't be pre-defined"
 #endif // __win32_crt_tchar_t
-#ifdef __win32_crt_lptstr_t
-#error "`__win32_crt_lptstr_t` mustn't be pre-defined"
-#endif // __win32_crt_lptstr_t
-#ifdef __win32_crt_lpctstr_t
-#error "`__win32_crt_lpctstr_t` mustn't be pre-defined"
-#endif // __win32_crt_lpctstr_t
 
 #define __win32_crt_uint_t UINT
 #define __win32_crt_handle_t HANDLE
 #define __win32_crt_dword_t DWORD
 #define __win32_crt_bool_t BOOL
 #define __win32_crt_tchar_t TCHAR
-#define __win32_crt_lptstr_t LPTSTR
-#define __win32_crt_lpctstr_t LPCTSTR
 
 #ifdef __win32_crt_exit_process
 #error "`__win32_crt_exit_process` mustn't be pre-defined"

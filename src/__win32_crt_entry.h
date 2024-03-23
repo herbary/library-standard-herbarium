@@ -10,6 +10,8 @@
 
 #ifdef _DEBUG
 #pragma comment(linker, "/INCREMENTAL")
+#else // !defined(_DEBUG)
+#pragma comment(linker, "/INCREMENTAL:NO")
 #endif // _DEBUG
 
 #pragma runtime_checks("scu", off)

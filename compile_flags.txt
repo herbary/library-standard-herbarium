@@ -25,4 +25,5 @@
 -Wno-unused-macros
 -Wno-extra-semi-stmt
 -Wno-invalid-pp-token
+-Wno-keyword-macro
 -I./inc

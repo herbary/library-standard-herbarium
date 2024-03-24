@@ -5,7 +5,7 @@
 #include <stdint.h>
 
 void * memset(void *dest, int c, size_t count) {
-    if (!dest) {
+    if (!dest || count == 0) {
         return dest;
     }
 
@@ -19,7 +19,9 @@ void * memset(void *dest, int c, size_t count) {
 }
 
 void * memcpy(void *dest, const void *src, size_t count) {
-    if (!dest || !src) {
+    if (!dest || !src
+            || dest == src
+            || count == 0) {
         return dest;
     }
 
@@ -28,6 +30,34 @@ void * memcpy(void *dest, const void *src, size_t count) {
 
     while (count--) {
         *dest_bytes++ = *src_bytes++;
+    }
+
+    return dest;
+}
+
+void * memmove(void *dest, const void *src, size_t count) {
+    if (!dest || !src
+            || dest == src
+            || count == 0) {
+        return dest;
+    }
+
+    uint8_t *dest_bytes = (uint8_t *)dest;
+    const uint8_t *src_bytes = (const uint8_t *)src;
+
+    if ((uintptr_t)dest_bytes < (uintptr_t)src_bytes) {
+        while (count--) {
+            *dest_bytes++ = *src_bytes++;
+        }
+
+        return dest;
+    }
+
+    dest_bytes += count - 1;
+    src_bytes += count - 1;
+
+    while (count--) {
+        *dest_bytes-- = *src_bytes--;
     }
 
     return dest;

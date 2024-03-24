@@ -75,6 +75,9 @@
 #ifdef __win32_crt_copy_memory
 #error "`__win32_crt_copy_memory` mustn't be pre-defined"
 #endif // __win32_crt_copy_memory
+#ifdef __win32_crt_move_memory
+#error "`__win32_crt_move_memory` mustn't be pre-defined"
+#endif // __win32_crt_move_memory
 
 #define __win32_crt_exit_process ExitProcess
 #define __win32_crt_get_std_handle GetStdHandle
@@ -93,6 +96,7 @@
 #define __win32_crt_heap_alloc HeapAlloc
 #define __win32_crt_heap_free HeapFree
 #define __win32_crt_copy_memory CopyMemory
+#define __win32_crt_move_memory MoveMemory
 
 #endif // HERBARY_STD_PREDEF___WIN32_CRT_H_INCLUDED
 #endif // _WIN32

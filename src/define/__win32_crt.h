@@ -39,6 +39,9 @@
 #ifdef __win32_crt_get_last_error
 #error "`__win32_crt_get_last_error` mustn't be pre-defined"
 #endif // __win32_crt_get_last_error
+#ifdef __win32_crt_set_last_error
+#error "`__win32_crt_set_last_error` mustn't be pre-defined"
+#endif // __win32_crt_set_last_error
 #ifdef __win32_crt_format_message
 #error "`__win32_crt_format_message` mustn't be pre-defined"
 #endif // __win32_crt_format_message
@@ -87,6 +90,7 @@
 #define __win32_crt_close_handle CloseHandle
 #define __win32_crt_write_console WriteConsole
 #define __win32_crt_get_last_error GetLastError
+#define __win32_crt_set_last_error SetLastError
 #define __win32_crt_format_message FormatMessage
 #define __win32_crt_make_lang_id MAKELANGID
 #define __win32_crt_local_free LocalFree

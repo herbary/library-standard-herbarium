@@ -40,7 +40,7 @@ int main(void) {
     }
 
     const __win32_crt_dword_t format_flags = FORMAT_MESSAGE_ALLOCATE_BUFFER | FORMAT_MESSAGE_FROM_SYSTEM | FORMAT_MESSAGE_IGNORE_INSERTS;
-    const __win32_crt_dword_t error_language = __win32_crt_make_language(LANG_NEUTRAL, SUBLANG_DEFAULT);
+    const __win32_crt_dword_t error_language = __win32_crt_make_lang_id(LANG_NEUTRAL, SUBLANG_DEFAULT);
 
     __win32_crt_tchar_t *error_message = NULL;
     const __win32_crt_dword_t error_length = __win32_crt_format_message(format_flags, NULL, error_code, error_language, (__win32_crt_tchar_t *)&error_message, 0, NULL);

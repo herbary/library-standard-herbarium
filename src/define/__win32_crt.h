@@ -42,9 +42,9 @@
 #ifdef __win32_crt_format_message
 #error "`__win32_crt_format_message` mustn't be pre-defined"
 #endif // __win32_crt_format_message
-#ifdef __win32_crt_make_language
-#error "`__win32_crt_make_language` mustn't be pre-defined"
-#endif // __win32_crt_make_language
+#ifdef __win32_crt_make_lang_id
+#error "`__win32_crt_make_lang_id` mustn't be pre-defined"
+#endif // __win32_crt_make_lang_id
 #ifdef __win32_crt_local_free
 #error "`__win32_crt_local_free` mustn't be pre-defined"
 #endif // __win32_crt_local_free
@@ -85,7 +85,7 @@
 #define __win32_crt_write_console WriteConsole
 #define __win32_crt_get_last_error GetLastError
 #define __win32_crt_format_message FormatMessage
-#define __win32_crt_make_language MAKELANGID
+#define __win32_crt_make_lang_id MAKELANGID
 #define __win32_crt_local_free LocalFree
 #define __win32_crt_text TEXT
 #define __win32_crt_tcslen _tcslen
